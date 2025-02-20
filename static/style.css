@@ -1,4 +1,4 @@
-/* General styles */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,8 +14,8 @@ header {
 
 
 .logo img {
-    width: 100px; /* Ajusta el tamaño del logo */
-    height: auto; /* Mantén la proporción de la imagen */
+    width: 100px; 
+    height: auto; 
 }
 
 .menu {
@@ -79,12 +79,12 @@ header {
 }
 
 .perfilDropdown a {
-    text-decoration: none; /* Elimina el subrayado */
-    color: inherit; /* Inherit color from parent element */
+    text-decoration: none;
+    color: inherit; 
 }
 
 .perfilDropdown a:hover {
-    background-color: #cccccc; /* Elimina el fondo azul del enlace */
+    background-color: #cccccc; 
 }
 
 .perfilDropdown img {
@@ -95,13 +95,13 @@ header {
 }
 
 .perfilDropdown:hover img {
-    background-color: #cccccc; /* El color al pasar el mouse por encima */
+    background-color: #cccccc;
 }
 
 .perfilDropdown img:hover {
-    background-color: #cccccc; /* Cambia esto por el color que desees */
-    border-radius: 50%; /* Mantener el borde redondeado, si es necesario */
-    transition: background-color 0.3s ease; /* Transición suave */
+    background-color: #cccccc; 
+    border-radius: 50%; 
+    transition: background-color 0.3s ease; 
 }
 
 .form-login h1 {
@@ -162,47 +162,47 @@ header {
     color: #000; 
     font-size: 1.5rem; 
 }
-/* Estilos de la barra de navegación */
+
 nav {
     display: flex;
-    justify-content: center; /* Centra los botones horizontalmente */
+    justify-content: center; 
 }
 
 nav ul {
-    list-style: none; /* Elimina los puntos de la lista */
-    padding: 0; /* Elimina el padding */
-    margin: 0; /* Elimina el margen */
-    display: flex; /* Hace que los elementos de la lista se alineen horizontalmente */
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
 }
 
 nav li {
-    margin: 0 15px; /* Espaciado entre botones */
+    margin: 0 15px; 
 }
 
 nav a {
-    color: white; /* Color del texto del botón */
-    padding: 10px 15px; /* Espaciado interno del botón */
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    border-radius: 5px; /* Bordes redondeados */
-    transition: background-color 0.3s; /* Transición suave al cambiar el color */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
 }
 
 nav a:hover {
-    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+    background-color: #0056b3; 
 }
 
 .navbar-light.bg-light {
-    background-color: #cccccc !important; /* Color de fondo de la barra de navegación */
+    background-color: #cccccc !important; 
 }
 
-/* Estilos generales del formulario */
+
 form.form-container {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     max-width: 800px;
-    margin: 20px auto; /* Centra el formulario */
+    margin: 20px auto; 
 }
 
 form h2 {
@@ -252,7 +252,7 @@ form h2 {
     background-color: #0056b3;
 }
 
-/* Estilo específico para las secciones de datos */
+
 h2 {
     font-size: 1.8em;
     border-bottom: 2px solid #ddd;
@@ -260,7 +260,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Ajuste de inputs más pequeños */
+
 .form-group input[type="date"],
 .form-group input[type="text"] {
     max-width: 100%;
@@ -277,7 +277,7 @@ h2 {
 }
 
 .detail {
-    width: 48%; /* Ocupa aproximadamente la mitad del espacio */
+    width: 48%; 
 }
 
 .detail h2 {
@@ -287,7 +287,7 @@ h2 {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px; /* Añadir margen superior */
+    margin-top: 20px; 
 }
 
 table th, table td {
@@ -297,12 +297,12 @@ table th, table td {
 
 table th {
     width: 40%;
-    background-color: #7b7c7e; /* Color de fondo del encabezado */
-    color: white; /* Color de texto del encabezado */
+    background-color: #7b7c7e; 
+    color: white; 
 }
 
 table tr:nth-child(even) {
-    background-color: #f2f2f2; /* Color de fondo alternativo */
+    background-color: #f2f2f2; 
 }
 
 .actions {
@@ -314,28 +314,28 @@ table tr:nth-child(even) {
 }
 
 
-/* Estilo para los filtros y ordenamiento */
+
 #filtros, #ordenar {
     display: flex;
-    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en líneas */
-    gap: 15px; /* Espaciado entre los elementos */
-    margin-bottom: 20px; /* Espaciado inferior */
+    flex-wrap: wrap; 
+    gap: 15px; 
+    margin-bottom: 20px; 
 }
 
 #filtros div, #ordenar div {
-    flex: 1; /* Permitir que los elementos crezcan */
-    min-width: 250px; /* Ancho mínimo para cada campo */
+    flex: 1; 
+    min-width: 250px; 
 }
 
 
 .title-container {
-    text-align: center; /* Centra el texto del título */
-    margin-bottom: 20px; /* Espacio debajo del título */
-    padding: 0; /* Elimina el relleno */
+    text-align: center; 
+    margin-bottom: 20px; 
+    padding: 0; 
 }
 
 .title-container h1 {
-    margin: 0; /* Elimina el margen por defecto del h1 */
+    margin: 0; 
 }
 .table {
     table-layout: fixed;
@@ -343,9 +343,9 @@ table tr:nth-child(even) {
 }
 
 .th, .td {
-    width: auto; /* Hace que el ancho se distribuya de manera uniforme */
-    word-wrap: break-word; /* Ajusta el contenido si es muy largo */
-    text-align: center; /* Opcional, alinea el contenido al centro */
+    width: auto; 
+    word-wrap: break-word; 
+    text-align: center; 
 }
 th a {
     color: black;
@@ -357,12 +357,12 @@ th a:hover {
 }
 
 
-/* Estilos para la tabla de empleados */
+
 
 
 #observaciones {
-    resize: none; /* Evita el redimensionamiento */
-    height: 100px; /* Altura fija, ajusta según sea necesario */
+    resize: none; 
+    height: 100px; 
 }
 
 .input-group {
@@ -371,9 +371,9 @@ th a:hover {
 }
 
 #clearDate {
-    margin-left: 5px; /* Espaciado entre el campo de fecha y la cruz */
-    font-size: 20px; /* Ajusta el tamaño de la cruz */
-    line-height: 1; /* Alinea verticalmente la cruz */
+    margin-left: 5px; 
+    font-size: 20px; 
+    line-height: 1; 
 }
 
 .entrenadores-list {
@@ -424,7 +424,7 @@ th a:hover {
 }
 
 .pagination .page-item {
-    margin: 0 5px; /* Reduce el espaciado horizontal */
+    margin: 0 5px; 
 }
 
 
@@ -461,7 +461,7 @@ th a:hover {
 }
 
 .button-group .btn {
-    width: 100%; /* Hace que ambos botones tengan el mismo ancho */
+    width: 100%; 
     padding: 10px 20px;
 }
 .btn:hover {

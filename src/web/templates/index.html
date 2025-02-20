@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Tiki-Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        main {
+            padding: 2em;
+            text-align: center;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Tiki-Data</h1>
+    </header>
+    <main>
+        
+        <div class="form-group">
+            <label for="fecha">Fecha de Pago:</label>
+            <div class="input-group">
+                <input type="date" class="form-control" id="fecha" name="fecha" required min="1994-01-01" max="{{ current_date }}" aria-describedby="fecha-help">
+            </div>
+            <small id="fecha-help" class="form-text text-muted">Seleccione una fecha válida entre 1994-01-01 y hoy.</small>
+            
+        </div>
+        <h2>Your one-stop solution for data analysis</h2>
+        <p>Explore our features and tools to get the most out of your data.</p>
+    
+    </main>
+    <footer>
+        <p>&copy; 2023 Tiki-Data. All rights reserved.</p>
+    </footer>
+</body>
+</html>
