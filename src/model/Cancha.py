@@ -15,9 +15,29 @@ class Cancha(db.Model):
     turnos = db.relationship("Turno", back_populates="cancha")
     
     
+    def __repr__(self):
+        return f"<Cancha {self.id} - {self.numero}>"
+    
     @classmethod
     def create(cls,numero):
         cancha = cls(numero=numero)
         db.session.add(cancha)
         db.session.commit()
         return cancha
+
+    @classmethod
+    def delete(cls,id):
+        cancha = cls.query.get(id)
+        db.session.delete(cancha)
+        db.session.commit()
+        return cancha
+    
+    @classmethod
+    def get_cancha(cls, numero):
+        return cls.query.get(numero)
+    
+    @classmethod
+    def get_all(cls):
+        return cls.query.all()
+    
+    
