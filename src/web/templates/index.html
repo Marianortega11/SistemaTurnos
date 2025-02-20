@@ -39,7 +39,7 @@
     <main>
         
         <div class="form-group">
-            <label for="fecha">Fecha de Pago:</label>
+            <label for="fecha">Fecha del turno</label>
             <div class="input-group">
                 <input type="date" class="form-control" id="fecha" name="fecha" required min="1994-01-01" max="{{ current_date }}" aria-describedby="fecha-help">
             </div>
@@ -48,7 +48,11 @@
         </div>
         <h2>Your one-stop solution for data analysis</h2>
         <p>Explore our features and tools to get the most out of your data.</p>
-    
+        <p>cada vez que mergees mal clickea aca</p>
+        <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
+      data-preference-id="825059558-6fc635cd-f90b-4c7f-8b10-653a442510a7" data-source="button">
+    </script>
+        <a href="{{url_for('turno.index')}}" class="btn btn-primary" aria-label="Seccion de turnos" >turnos</a>
     </main>
     <footer>
         <p>&copy; 2023 Tiki-Data. All rights reserved.</p>
