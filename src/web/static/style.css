@@ -49,3 +49,12 @@ footer {
     background-color: #555; /* Un gris un poco más claro al pasar el ratón */
     border-color: #555;
 }
+
+.img-hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.img-hover-effect:hover {
+    transform: scale(1.05); /* Escala la imagen al 105% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
