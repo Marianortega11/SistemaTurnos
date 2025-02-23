@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Fondo oscuro suave */
+    color: #e0e0e0; /* Texto claro para contraste */
+}
+
+header {
+    background-color: #333; /* Un negro más suave */
+    color: #ff8c42; /* Naranja no muy fluorescente */
+    padding: 1em 0;
+    text-align: center;
+}
+
+main {
+    padding: 2em;
+    text-align: center;
+}
+
+footer {
+    background-color: #333; /* Un negro más suave */
+    color: #ff8c42; /* Naranja no muy fluorescente */
+    padding: 1em 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.btn-primary {
+    background-color: #ff8c42; /* Naranja no muy fluorescente */
+    border-color: #ff8c42;
+    color: #1a1a1a; /* Texto oscuro para contraste */
+}
+
+.btn-primary:hover {
+    background-color: #e67e3e; /* Un tono de naranja más oscuro al pasar el ratón */
+    border-color: #e67e3e;
+}
+
+.btn-secondary {
+    background-color: #444; /* Un gris oscuro para los botones secundarios */
+    border-color: #444;
+    color: #ff8c42; /* Texto naranja */
+}
+
+.btn-secondary:hover {
+    background-color: #555; /* Un gris un poco más claro al pasar el ratón */
+    border-color: #555;
+}
