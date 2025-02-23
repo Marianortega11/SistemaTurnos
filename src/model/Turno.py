@@ -28,4 +28,27 @@ class Turno(db.Model):
         db.session.add(turno)
         db.session.commit()
         return turno
+    
+    @classmethod
+    def delete(cls,id):
+        turno = cls.query.get(id)
+        db.session.delete(turno)
+        db.session.commit()
+        return turno
+    
+    """
+        a implementar
+    """
+    @classmethod
+    def update(cls, id, horario, fecha, cancha_id, usuario_id):
+       pass
+    
+    @classmethod
+    def get_turno(cls, id):
+        return cls.query.get(id)
+    
+    @classmethod
+    def get_all(cls):
+        return cls.query.all()
         
+    

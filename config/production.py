@@ -3,6 +3,7 @@ import os
 class Config:
     DEBUG = False
     SESSION_TYPE = "filesystem"
+    SECRET_KEY = os.environ.get("SECRET_KEY")
     db_user = os.getenv("AZURE_SQL_USER")
     db_password = os.getenv("AZURE_SQL_PASSWORD")
     db_host = os.getenv("AZURE_SQL_SERVER")

@@ -1,57 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Tiki-Data</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1em 0;
-            text-align: center;
-        }
-        main {
-            padding: 2em;
-            text-align: center;
-        }
-        footer {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1em 0;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    <title>Sobre Nosotros - Cancha Libre</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Tiki-Data</h1>
+    <!-- Header -->
+    <header class="text-center py-3">
+        <h1>Sobre Nosotros</h1>
+        <nav>
+            <a href="{{ url_for('auth.login') }}" class="btn btn-primary">Iniciar Sesión</a>
+            <a href="{{ url_for('auth.register') }}" class="btn btn-primary">Registrarse</a>
+        </nav>
     </header>
-    <main>
-        
-        <div class="form-group">
-            <label for="fecha">Fecha de Pago:</label>
-            <div class="input-group">
-                <input type="date" class="form-control" id="fecha" name="fecha" required min="1994-01-01" max="{{ current_date }}" aria-describedby="fecha-help">
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- Sección 1: Introducción -->
+        <section class="row my-5 align-items-center">
+            <div class="col-md-6">
+                <h2>Nuestra Historia</h2>
+                <p>Rock and Goal nació con el objetivo de ofrecer las mejores instalaciones para jugar fútbol 7 en la ciudad. Desde entonces, nos hemos convertido en el lugar favorito de los amantes del fútbol en La Plata.</p>
             </div>
-            <small id="fecha-help" class="form-text text-muted">Seleccione una fecha válida entre 1994-01-01 y hoy.</small>
-            
-        </div>
-        <h2>Your one-stop solution for data analysis</h2>
-        <p>Explore our features and tools to get the most out of your data.</p>
-    
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='images/pelota.png') }}" alt="Historia" class="img-fluid rounded img-hover-effect">
+            </div>
+        </section>
+
+        <!-- Sección 2: Instalaciones -->
+        <section class="row my-5 align-items-center">
+            <div class="col-md-6 order-md-2">
+                <h2>Nuestras Instalaciones</h2>
+                <p>Contamos con 4 canchas de fútbol 7 de última generación, iluminación LED, vestuarios y un bar para que disfrutes al máximo tu experiencia.</p>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <img src="{{ url_for('static', filename='images/jugador.jpg') }}" alt="Instalaciones" class="img-fluid rounded img-hover-effect">
+            </div>
+        </section>
+
+        <!-- Sección 3: Experiencia -->
+        <section class="row my-5 align-items-center">
+            <div class="col-md-6">
+                <h2>Experiencia del Usuario</h2>
+                <p>Nuestros clientes disfrutan de eventos especiales, torneos y la posibilidad de reservar turnos de manera rápida y sencilla a través de nuestra plataforma.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='images/diego.png') }}" alt="Experiencia" class="img-fluid rounded img-hover-effect">
+            </div>
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2023 Tiki-Data. All rights reserved.</p>
+
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <p>Síguenos en nuestras redes sociales:</p>
+        <a href="#" class="btn btn-outline-light">Facebook</a>
+        <a href="#" class="btn btn-outline-light">Instagram</a>
+        <a href="#" class="btn btn-outline-light">Twitter</a>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
