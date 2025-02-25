@@ -3,10 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turno System</title>
+    <title>Reservar Turno</title>
 </head>
 <body>
-    <h1>Aca van a aparecer las canchas</h1>
-    <p>te lo juro</p>
+    <h2>Reservar Turno para {{ fecha }}</h2>
+    
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    
+    <form method="post" action="">
+        
+        <h3>Lista de Canchas y Horarios Disponibles</h3>
+        <ul>
+            {% for item in canchas_con_turnos %}
+                <li>
+                    <strong>Cancha {{ item.cancha.numero }}: {{ item.cancha.nombre }}</strong>
+                    <input type="radio" name="cancha" value="{{ item.cancha.id }}"> Seleccionar esta cancha
+                    <ul>
+                        {% for turno in item.turnos %}
+                            <li>
+                                <input type="radio" name="horario" value="{{ turno[1] }}"> {{ turno[0] }} - {{ turno[1] }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+        
+        <button type="submit">Reservar</button>
+    </form>
 </body>
 </html>

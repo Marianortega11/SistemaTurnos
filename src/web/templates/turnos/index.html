@@ -11,11 +11,25 @@
 <body>
     <h1>Welcome to the Turno System</h1>
     <p>This is a simple HTML page for the Turno System project.</p>
-    <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
-      data-preference-id="825059558-6fc635cd-f90b-4c7f-8b10-653a442510a7" data-source="button">
-    </script>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <h2>Reservar turno</h2>
+    <p>Seleccione una fecha para reservar un turno.</p>
+    <form method="post" action="">
+      {{ form.hidden_tag() }}
+      {{ form.fecha.label }} {{ form.fecha }}
+      {{ form.submit }}
+  </form>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
-    <a href="{{ url_for('turno.reservar')}}" aria-label="Reservar turno">Reservar turno</a>
+  
 </body>
 </html>

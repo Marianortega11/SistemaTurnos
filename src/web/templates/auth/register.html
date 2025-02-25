@@ -7,12 +7,24 @@
 </head>
 <body>
     <h2>Register</h2>
+    
+    <!-- Bloque para mostrar mensajes flash -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    
     <form method="post" action="">
         {{ form.hidden_tag() }}
-        {{ form.username }}
-        {{ form.password }}
+        {{ form.email.label }} {{ form.email }}
+        {{ form.password.label }} {{ form.password }}
         {{ form.submit }}
     </form>
-    <a href="{{url_for('auth.login')}}">Ya tenes una cuenta? Inicia Sesion</a>
+    <a href="{{ url_for('auth.login') }}">Ya tenes una cuenta? Inicia Sesion</a>
 </body>
 </html>

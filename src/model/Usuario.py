@@ -20,10 +20,15 @@ class Usuario(db.Model):
     @classmethod
     def create(cls,email, password):
         hashed_password = generate_password_hash(password)
-        usuario = Usuario(email=email, password=hashed_password)
-        db.session.add(usuario)
-        db.session.commit()
-        return usuario
+        
+        usuario = cls.get_user_by_email(email)
+        if usuario is None:
+            print("entro")
+            usuario = Usuario(email=email, password=hashed_password)
+            db.session.add(usuario)
+            db.session.commit()
+            return usuario
+        raise ValueError("Username already taken")
     
     @classmethod
     def check_password(cls, email, password):
@@ -32,3 +37,8 @@ class Usuario(db.Model):
             if check_password_hash(usuario.password, password):
                 return usuario
         return False
+    
+    @classmethod
+    def get_user_by_email(cls, email):
+        return cls.query.filter_by(email=email).first()
+    
